@@ -3,7 +3,6 @@
 namespace VL;
 use VL\TypeType;
 use VL\ItemsLoad;
-use VL\FlameParticle;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\inventory\InventoryOpenEvent;
@@ -529,7 +528,7 @@ class LobbyItems extends PluginBase implements Listener
 
 			$event->setCancelled(true);
 
-			if ($block->x == 260 && $block->y == 6 && $block->z == 238) {
+			if ($block->x == 6 && $block->y == 31 && $block->z == -77) {
 
 				if (!$config->get("OpenChest1")) {
 
