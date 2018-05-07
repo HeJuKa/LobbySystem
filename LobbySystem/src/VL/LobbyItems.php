@@ -626,7 +626,7 @@ class LobbyItems extends PluginBase implements Listener
 		}
 		if ($in == TextFormat::RESET . TextFormat::YELLOW . "Discord") {
 			var_dump("geht");
-			 $event->getPlayer()->sendMessage($this->prefix . Textformat::GREEN . "Unseren Discord findest du unter den link: https://discord.gg/N9JEsAE");
+			 $event->getPlayer()->sendMessage($this->prefix . Textformat::GREEN . "Unseren Discord findest du unter den Link: https://discord.gg/N9JEsAE");
          }
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Fly") {
 			var_dump("geht");
