@@ -418,6 +418,9 @@ class LobbyItems extends PluginBase implements Listener
 		
 		$item6 = Item::get(347, 0, 1);
 		$item6->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Discord");
+		
+		$item7 = Item::get(46, 0, 1);
+		$item7->setCustomName(TextFormat::RESET . TextFormat::GREEN . "PartySystem");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
