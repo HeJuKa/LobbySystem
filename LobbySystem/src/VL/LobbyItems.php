@@ -214,7 +214,7 @@ class LobbyItems extends PluginBase implements Listener
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
 		$Survival = Item::get(278, 1, 1);
-		$Survival->setCustomName(TextFormat::RESET . TextFormat::PURPLE . "Survival");
+		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Survival");
 
 		$KnockFFA = Item::get(280, 1, 1);
 		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockFFA");
