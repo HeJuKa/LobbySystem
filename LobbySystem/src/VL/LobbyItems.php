@@ -624,7 +624,7 @@ class LobbyItems extends PluginBase implements Listener
 			var_dump("geht");
 			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bitte benutze /nick on");
 		}
-		if ($in == TextFormat::RESET . TextFormat::RED . "Discord") {
+		if ($in == TextFormat::RESET . TextFormat::YELLOW . "Discord") {
 			var_dump("geht");
 			 $event->getPlayer()->sendMessage($this->prefix . Textformat::GREEN . "Unseren Discord findest du unter den link: https://discord.gg/N9JEsAE");
          }
