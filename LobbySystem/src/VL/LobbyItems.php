@@ -214,7 +214,7 @@ class LobbyItems extends PluginBase implements Listener
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
 		$Survival = Item::get(278, 1, 1);
-		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Survival");
+		$Survival->setCustomName(TextFormat::RESET . TextFormat::PURPLE . "Survival");
 
 		$KnockFFA = Item::get(280, 1, 1);
 		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockFFA");
@@ -415,6 +415,9 @@ class LobbyItems extends PluginBase implements Listener
 		
 		$item5 = Item::get(54, 0, 1);
 		$item5->setCustomName(TextFormat::RESET . TextFormat::GREEN . "ChestOpening");
+		
+		$item6 = Item::get(347, 0, 1);
+		$item6->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Discord");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -439,10 +442,11 @@ class LobbyItems extends PluginBase implements Listener
 
 		}
 		$inv->setItem(0, $item2);
-		$inv->setItem(4, $item1);
+		$inv->setItem(5, $item1);
 		$inv->setItem(1, $item3);
 		$inv->setItem(7, $item4);
 		$inv->setItem(8, $item5);
+		$inv->setItem(3, $item6);
 
 	}
 
@@ -620,7 +624,10 @@ class LobbyItems extends PluginBase implements Listener
 			var_dump("geht");
 			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bitte benutze /nick on");
 		}
-
+		if ($in == TextFormat::RESET . TextFormat::RED . "Discord") {
+			var_dump("geht");
+			 $event->getPlayer()->sendMessage($this->prefix . Textformat::GREEN . "Unseren Discord findest du unter den link: https://discord.gg/N9JEsAE");
+         }
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Fly") {
 			var_dump("geht");
 			$sender = $event->getPlayer();
