@@ -213,8 +213,8 @@ class LobbyItems extends PluginBase implements Listener
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
-		$CityBuildV2 = Item::get(278, 1, 1);
-		$CityBuildV2->setCustomName(TextFormat::RESET . TextFormat::BLUE . "CityBuildV2");
+		$Survival = Item::get(278, 1, 1);
+		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Survival");
 
 		$KnockFFA = Item::get(280, 1, 1);
 		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockFFA");
@@ -233,7 +233,7 @@ class LobbyItems extends PluginBase implements Listener
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
-		$inv->setItem(1, $CityBuildV2);
+		$inv->setItem(1, $Survival);
 		$inv->setItem(3, $KnockFFA);
 		$inv->setItem(4, $MiniGames);
 		$inv->setItem(6, $LobbyGames);
