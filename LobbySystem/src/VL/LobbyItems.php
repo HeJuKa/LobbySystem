@@ -450,6 +450,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(7, $item4);
 		$inv->setItem(8, $item5);
 		$inv->setItem(3, $item6);
+		$inv->setItem(5, $item7);
 
 	}
 
