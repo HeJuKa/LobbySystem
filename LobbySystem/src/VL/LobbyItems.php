@@ -94,7 +94,7 @@ class LobbyItems extends PluginBase implements Listener
 		@mkdir($this->getDataFolder());
 		$config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 
-		$config->set("OpenChest1", false);
+		$config->set("OpenChest1", true);
 		$config->set("OpenChest2", false);
 		$config->save();
 
@@ -419,8 +419,8 @@ class LobbyItems extends PluginBase implements Listener
 		$item7 = Item::get(46, 0, 1);
 		$item7->setCustomName(TextFormat::RESET . TextFormat::GREEN . "PartySystem");
 		
-		$item8 = Item::get(264, 0, 1);
-		$item8->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Rang");
+		$item8 = Item::get(54, 0, 1);
+		$item8->setCustomName(TextFormat::RESET . TextFormat::GREEN . "ChestOpening");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -609,13 +609,13 @@ class LobbyItems extends PluginBase implements Listener
 		}
 		//run
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "KnockFFA") {
-			$event->getPlayer()->transfer("VaronPE.fun", "8780");
+			$event->getPlayer()->transfer("VaronPE.de", "8780");
 		}
 		if ($in == TextFormat::RESET . TextFormat::YELLOW . "MiniGames") {
-			$event->getPlayer()->transfer("VaronPE.fun", "5557");
+			$event->getPlayer()->transfer("VaronPE.de", "5557");
 		}
 		if ($in == TextFormat::RESET . TextFormat::GREEN . "Citybuild") {
-			$event->getPlayer()->transfer("VaronPE.fun","3557");
+			$event->getPlayer()->transfer("VaronPE.de","3557");
 		}
 
 		if ($in == TextFormat::RESET . TextFormat::GREEN . "Clans") {
@@ -676,9 +676,9 @@ class LobbyItems extends PluginBase implements Listener
 			}
         }
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Rang") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Teleporter") {
 			
-			$this->getRang($player);
+			$this->getTeleporter($player);
 		}
 		
 		if($in == TextFormat::RESET . TextFormat::BLUE . "Supremium - 10€") {
