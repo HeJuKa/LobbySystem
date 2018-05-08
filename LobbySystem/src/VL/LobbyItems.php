@@ -536,7 +536,7 @@ class LobbyItems extends PluginBase implements Listener
 
 			$event->setCancelled(true);
 
-			if ($block->x == 6 && $block->y == 31 && $block->z == -77) {
+			if ($block->x == -901 && $block->y == 21 && $block->z == -711) {
 
 				if (!$config->get("OpenChest1")) {
 
