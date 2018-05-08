@@ -1200,11 +1200,11 @@ class LobbyItems extends PluginBase implements Listener
 				
 			} else {
 				$player->removeAllEffects();
-				$inv->setBoots(Item::get(317, 0, 1));
 				$effect = Effect::getEffect(8);
 				$effect->setDuration(999);
 				$effect->setAmplifier(1);
 				$effect->setVisible(false);
+				$inv->setBoots(Item::get(317, 0, 1));
 				$player->addEffect($effect);
 				
 				$this->jump[] = $name;
