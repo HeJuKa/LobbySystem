@@ -413,14 +413,14 @@ class LobbyItems extends PluginBase implements Listener
 		$item3 = Item::get(446, 0, 1);
 		$item3->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Clans");
 		
-		$item5 = Item::get(54, 0, 1);
-		$item5->setCustomName(TextFormat::RESET . TextFormat::GREEN . "ChestOpening");
-		
 		$item6 = Item::get(347, 0, 1);
 		$item6->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Discord");
 		
 		$item7 = Item::get(46, 0, 1);
 		$item7->setCustomName(TextFormat::RESET . TextFormat::GREEN . "PartySystem");
+		
+		$item8 = Item::get(264, 0, 1);
+		$item8->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Rang");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -448,7 +448,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(4, $item1);
 		$inv->setItem(1, $item3);
 		$inv->setItem(7, $item4);
-		$inv->setItem(8, $item5);
+		$inv->setItem(8, $item8);
 		$inv->setItem(3, $item6);
 		$inv->setItem(5, $item7);
 
@@ -676,14 +676,14 @@ class LobbyItems extends PluginBase implements Listener
 			}
         }
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Teleporter") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Rang") {
 			
-			$this->getTeleporter($player);
+			$this->getRang($player);
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Diamond - 10€") {
+		if($in == TextFormat::RESET . TextFormat::BLUE . "Supremium - 10€") {
 			
-			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Diamond" . TextFormat::GRAY . " [===");
+			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::BLUE . "Supremium" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "10 Euro");
 			$player->sendMessage(TextFormat::GOLD . "Features" . TextFormat::GRAY . ": ");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
@@ -691,9 +691,9 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Hero - 20€") {
+		if($in == TextFormat::RESET . TextFormat::RED . "King - 20€") {
 			
-			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Hero" . TextFormat::GRAY . " [===");
+			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::RED . "King" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "20 Euro");
 			$player->sendMessage(TextFormat::GOLD . "Features" . TextFormat::GRAY . ": ");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
@@ -703,9 +703,9 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Titan - 15€") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Premium - 15€") {
 			
-			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Titan" . TextFormat::GRAY . " [===");
+			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Premium" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "15 Euro");
 			$player->sendMessage(TextFormat::GOLD . "Features" . TextFormat::GRAY . ": ");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
