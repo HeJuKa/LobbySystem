@@ -119,7 +119,7 @@ class TypeType extends PluginTask {
 					
 				}
 				
-				$config->set("OpenChest2", false);
+				$config->set("OpenChest2", true);
 				$config->save();
 				
 			}
