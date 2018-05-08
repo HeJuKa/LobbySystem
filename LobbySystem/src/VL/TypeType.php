@@ -3,6 +3,7 @@ namespace VL;
 use VL\LobbyItems;
 use VL\ItemsLoad;
 use VL\FlameParticle;
+use VL\RedstoneParticle;
 
 use pocketmine\scheduler\PluginTask;
 use pocketmine\plugin\Plugin;
@@ -74,7 +75,7 @@ class TypeType extends PluginTask {
 					
 				}
 				
-				$config->set("OpenChest1", false);
+				$config->set("OpenChest1", true);
 				$config->save();
 				
 			}
