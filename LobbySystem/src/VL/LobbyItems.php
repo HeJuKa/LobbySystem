@@ -216,8 +216,8 @@ class LobbyItems extends PluginBase implements Listener
 		$Survival = Item::get(278, 1, 1);
 		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Survival");
 
-		$KnockFFA = Item::get(280, 1, 1);
-		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockFFA");
+		$FFA = Item::get(280, 1, 1);
+		$FFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "FFA");
 
 		$Citybuild = Item::get(138, 1, 1);
 		$Citybuild->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Citybuild");
@@ -234,7 +234,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
 		$inv->setItem(1, $Survival);
-		$inv->setItem(3, $KnockFFA);
+		$inv->setItem(3, $FFA);
 		$inv->setItem(4, $MiniGames);
 		$inv->setItem(6, $LobbyGames);
 		$inv->setItem(7, $Bald);
@@ -608,8 +608,8 @@ class LobbyItems extends PluginBase implements Listener
 
 		}
 		//run
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "KnockFFA") {
-			$event->getPlayer()->transfer("VaronPE.de", "8780");
+		if ($in == TextFormat::RESET . TextFormat::GOLD . "FFA") {
+			$event->getPlayer()->transfer("VaronPE.de", "1212");
 		}
 		if ($in == TextFormat::RESET . TextFormat::YELLOW . "MiniGames") {
 			$event->getPlayer()->transfer("VaronPE.de", "5557");
