@@ -216,7 +216,7 @@ class LobbyItems extends PluginBase implements Listener
 		$Survival = Item::get(278, 1, 1);
 		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Survival");
 
-		$FFA = Item::get(280, 1, 1);
+		$FFA = Item::get(267, 1, 1);
 		$FFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "FFA");
 
 		$Citybuild = Item::get(138, 1, 1);
