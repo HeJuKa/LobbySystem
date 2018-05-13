@@ -216,10 +216,10 @@ class LobbyItems extends PluginBase implements Listener
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
 		$Survival = Item::get(278, 1, 1);
-		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Survival");
+		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Survival");
 
-		$FFA = Item::get(280, 1, 1);
-		$FFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "FFA");
+		$FFA = Item::get(267, 1, 1);
+		$FFA->setCustomName(TextFormat::RESET . TextFormat::AQUA . "FFA");
 
 		$Citybuild = Item::get(138, 1, 1);
 		$Citybuild->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Citybuild");
@@ -227,8 +227,8 @@ class LobbyItems extends PluginBase implements Listener
 		$MiniGames = Item::get(322, 1, 1);
 		$MiniGames->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MiniGames");
 		
-		$LobbyGames = Item::get(369, 1, 1);
-		$LobbyGames->setCustomName(TextFormat::RESET . TextFormat::BLUE . "LobbyGames");
+		$Bald = Item::get(369, 1, 1);
+		$Bald->setCustomName(TextFormat::RESET . TextFormat::RED . "Bald");
 		
 		$Bald = Item::get(7, 1, 1);
 		$Bald->setCustomName(TextFormat::RESET . TextFormat::RED . "Bald");
@@ -238,7 +238,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(1, $Survival);
 		$inv->setItem(3, $FFA);
 		$inv->setItem(4, $MiniGames);
-		$inv->setItem(6, $LobbyGames);
+		$inv->setItem(6, $Bald);
 		$inv->setItem(7, $Bald);
 
 	}
@@ -363,6 +363,9 @@ class LobbyItems extends PluginBase implements Listener
 
 		$item5 = Item::get(421, 0, 1);
 		$item5->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Nick");
+		
+		$item6 = Item::get(383, 0, 1);
+		$item6->setCustomName(TextFormat::RESET . TextFormat::AQUA . "Pets");
 
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
@@ -372,6 +375,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(2, $item3);
 		$inv->setItem(3, $item4);
 		$inv->setItem(4, $item5);
+		$inv->setItem(5, $item6);
 		$inv->setItem(8, $exit);
 
 	}
@@ -422,7 +426,7 @@ class LobbyItems extends PluginBase implements Listener
 		$item7->setCustomName(TextFormat::RESET . TextFormat::GREEN . "PartySystem");
 		
 		$item8 = Item::get(54, 0, 1);
-		$item8->setCustomName(TextFormat::RESET . TextFormat::GREEN . "ChestOpening");
+		$item8->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Coins Shop");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -623,7 +627,7 @@ class LobbyItems extends PluginBase implements Listener
 		if ($in == TextFormat::RESET . TextFormat::GREEN . "Clans") {
 
 			//$this->getRangMenu($player);
-			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bitte benutze /clan help");
+			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bitte benutze /clans help");
 		}
 
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Nick") {
@@ -758,7 +762,7 @@ class LobbyItems extends PluginBase implements Listener
 		if($in == TextFormat::RESET . TextFormat::GOLD . "Gross") {
 			
 			$player->sendMessage($this->prefix . TextFormat::GREEN . "Du bist jetzt " . TextFormat::GOLD . "Gross");
-			$player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1.5);
+			$player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 2.0);
 			
 		}
 		
