@@ -615,7 +615,7 @@ class LobbyItems extends PluginBase implements Listener
 		}
 		//run
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "FFA") {
-			$player->teleport(new Vector3("$-64, $25, $112"), $yaw, $pitch);
+			$player->teleport(new Vector3("$-64, $25, $112"));
 		}
 		if ($in == TextFormat::RESET . TextFormat::YELLOW . "MiniGames") {
 			$event->getPlayer()->transfer("VaronPE.de", "5557");
