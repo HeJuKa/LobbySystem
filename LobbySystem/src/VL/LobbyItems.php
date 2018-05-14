@@ -3,7 +3,6 @@
 namespace VL;
 use VL\TypeType;
 use VL\ItemsLoad;
-use VL\FlameParticle;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\inventory\InventoryOpenEvent;
