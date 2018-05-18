@@ -215,8 +215,8 @@ class LobbyItems extends PluginBase implements Listener
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
-		$Survival = Item::get(278, 1, 1);
-		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Factions");
+		$Factions = Item::get(278, 1, 1);
+		$Factions->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Factions");
 
 		$FFA = Item::get(267, 1, 1);
 		$FFA->setCustomName(TextFormat::RESET . TextFormat::AQUA . "FFA");
@@ -226,20 +226,12 @@ class LobbyItems extends PluginBase implements Listener
 
 		$MiniGames = Item::get(322, 1, 1);
 		$MiniGames->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MiniGames");
-		
-		$Bald = Item::get(369, 1, 1);
-		$Bald->setCustomName(TextFormat::RESET . TextFormat::RED . "Bald");
-		
-		$Bald = Item::get(7, 1, 1);
-		$Bald->setCustomName(TextFormat::RESET . TextFormat::RED . "Bald");
 
 		$inv->setItem(8, $exit);
-		$inv->setItem(0, $Citybuild);
-		$inv->setItem(1, $Survival);
-		$inv->setItem(3, $FFA);
-		$inv->setItem(4, $MiniGames);
-		$inv->setItem(6, $Bald);
-		$inv->setItem(7, $Bald);
+		$inv->setItem(3, $Citybuild);
+		$inv->setItem(4, $Factions);
+		$inv->setItem(5, $FFA);
+		$inv->setItem(6, $MiniGames);
 
 	}
 
