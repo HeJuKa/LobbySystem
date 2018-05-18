@@ -216,7 +216,7 @@ class LobbyItems extends PluginBase implements Listener
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
 		$Survival = Item::get(278, 1, 1);
-		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Survival");
+		$Survival->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Factions");
 
 		$FFA = Item::get(267, 1, 1);
 		$FFA->setCustomName(TextFormat::RESET . TextFormat::AQUA . "FFA");
@@ -419,12 +419,6 @@ class LobbyItems extends PluginBase implements Listener
 		$item3 = Item::get(446, 0, 1);
 		$item3->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Clans");
 		
-		$item6 = Item::get(347, 0, 1);
-		$item6->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Discord");
-		
-		$item7 = Item::get(46, 0, 1);
-		$item7->setCustomName(TextFormat::RESET . TextFormat::GREEN . "PartySystem");
-		
 		$item8 = Item::get(54, 0, 1);
 		$item8->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Coins Shop");
 
@@ -442,7 +436,7 @@ class LobbyItems extends PluginBase implements Listener
 		} elseif (in_array($name, $this->showvips)) {
 
 			$item4 = Item::get(351, 5, 1);
-			$item4->setCustomName(TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIPs sichtbar");
+			$item4->setCustomName(TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIPs und Teammitglieder sichtbar");
 
 		} elseif (in_array($name, $this->shownone)) {
 
@@ -455,8 +449,6 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(1, $item3);
 		$inv->setItem(7, $item4);
 		$inv->setItem(8, $item8);
-		$inv->setItem(3, $item6);
-		$inv->setItem(5, $item7);
 
 	}
 
@@ -486,7 +478,7 @@ class LobbyItems extends PluginBase implements Listener
 		$name = $player->getName();
 		$this->getItems($player);
 
-		$event->setJoinMessage("");
+		$event->setJoinMessage("Willkommen auf unserem Netzwerk, {player}");
 		$event->getPlayer()->setFood("20");
 		$player->setGamemode(2);
 
@@ -549,11 +541,11 @@ class LobbyItems extends PluginBase implements Listener
 					$config->set("OpenChest1", true);
 					$config->save();
 
-					$player->sendMessage($this->prefix . TextFormat::GREEN . "Ã–ffne Kiste ...");
+					$player->sendMessage($this->prefix . TextFormat::GREEN . "Öffne Kiste ...");
 
 				} else {
 
-					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geÃ¶ffnet.");
+					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geöffnet.");
 
 				}
 
@@ -566,11 +558,11 @@ class LobbyItems extends PluginBase implements Listener
 					$config->set("OpenChest2", true);
 					$config->save();
 
-					$player->sendMessage($this->prefix . TextFormat::GREEN . "Ã–ffne Kiste ...");
+					$player->sendMessage($this->prefix . TextFormat::GREEN . "Öffne Kiste ...");
 
 				} else {
 
-					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geÃ¶ffnet.");
+					$player->sendMessage($this->prefix . TextFormat::RED . "Hier wird bereits eine Kiste geöffnet.");
 
 				}
 
@@ -583,7 +575,7 @@ class LobbyItems extends PluginBase implements Listener
 
 		if ($in == TextFormat::RESET . TextFormat::GREEN . "Alle Spieler sichtbar") {
 			$item = Item::get(351, 5, 1);
-			$item->setCustomName(TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIPs sichtbar");
+			$item->setCustomName(TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIPs und Teammitglieder sichtbar");
 
 			$inv->setItem(7, $item);
 
@@ -592,7 +584,7 @@ class LobbyItems extends PluginBase implements Listener
 
 		}
 
-		if ($in == TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIPs sichtbar") {
+		if ($in == TextFormat::RESET . TextFormat::DARK_PURPLE . "Nur VIPs und Teammitglieder sichtbar") {
 			$item = Item::get(351, 8, 1);
 			$item->setCustomName(TextFormat::RESET . TextFormat::GRAY . "Keine Spieler sichtbar");
 
@@ -615,7 +607,7 @@ class LobbyItems extends PluginBase implements Listener
 		}
 		//run
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "FFA") {
-			$player->teleport(new Vector3("-64, 25, 112"));
+			$player->teleport(new Vector3("$-64, $25, $112"));
 		}
 		if ($in == TextFormat::RESET . TextFormat::YELLOW . "MiniGames") {
 			$event->getPlayer()->transfer("VaronPE.de", "5557");
@@ -633,11 +625,8 @@ class LobbyItems extends PluginBase implements Listener
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Nick") {
 			var_dump("geht");
 			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bitte benutze /nick on");
-		}
-		if ($in == TextFormat::RESET . TextFormat::YELLOW . "Discord") {
-			var_dump("geht");
-			 $event->getPlayer()->sendMessage($this->prefix . Textformat::GREEN . "Unseren Discord findest du unter den Link: https://discord.gg/N9JEsAE");
          }
+         
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Fly") {
 			var_dump("geht");
 			$sender = $event->getPlayer();
