@@ -228,8 +228,8 @@ class LobbyItems extends PluginBase implements Listener
 		$MiniGames->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MiniGames");
 
 		$inv->setItem(8, $exit);
-		$inv->setItem(3, $Citybuild);
-		$inv->setItem(4, $Factions);
+		$inv->setItem(2, $Citybuild);
+		$inv->setItem(3, $Factions);
 		$inv->setItem(5, $FFA);
 		$inv->setItem(6, $MiniGames);
 
@@ -412,7 +412,7 @@ class LobbyItems extends PluginBase implements Listener
 		$item3->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Clans");
 		
 		$item8 = Item::get(54, 0, 1);
-		$item8->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Coins Shop");
+		$item8->setCustomName(TextFormat::RESET . TextFormat::AQUA . "Coins Shop");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -470,7 +470,7 @@ class LobbyItems extends PluginBase implements Listener
 		$name = $player->getName();
 		$this->getItems($player);
 
-		$event->setJoinMessage("Willkommen auf unserem Netzwerk, {player}");
+		$event->setJoinMessage("");
 		$event->getPlayer()->setFood("20");
 		$player->setGamemode(2);
 
@@ -619,6 +619,11 @@ class LobbyItems extends PluginBase implements Listener
 			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bitte benutze /nick on");
          }
          
+         if ($in == TextFormat::RESET . TextFormat::AQUA . "Coins Shop") {
+              var_dump("geht");
+              $event->getPlayer()->sendMessage($this->prefix . TextFormat::DARK_RED . "Derzeit in Arbeit");
+          }
+        
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Fly") {
 			var_dump("geht");
 			$sender = $event->getPlayer();
