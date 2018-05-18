@@ -227,15 +227,15 @@ class LobbyItems extends PluginBase implements Listener
 		$MiniGames = Item::get(322, 1, 1);
 		$MiniGames->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MiniGames");
 		
-		$<---SurvivalAbteilung = Item::get(2, 1, 1);
-		$<---SurvivalAbteilung->setCustomName(TextFormat::RESET . TextFormat::RED . "<---SurvivalAbteilung");
+		$SurvivalAbteilung = Item::get(2, 1, 1);
+		$SurvivalAbteilung->setCustomName(TextFormat::RESET . TextFormat::RED . "SurvivalAbteilung");
 
 		$inv->setItem(4, $exit);
 		$inv->setItem(1, $Citybuild);
 		$inv->setItem(0, $Factions);
 		$inv->setItem(7, $FFA);
 		$inv->setItem(8, $MiniGames);
-		$inv->setItem(3, $<---SurvivalAbteilung);
+		$inv->setItem(3, $SurvivalAbteilung);
 
 	}
 
